@@ -1,0 +1,9 @@
+# This command checks if nginx is installed, if not installed then installs it 
+# To minimise computational resources 
+> docker run -it --rm -d -p 8080:80 --name testautomation nginx
+
+# Build image 
+> docker build -t testauto:v1 .     
+
+# Run container 
+> docker run -d -p 80:80 testauto:v1
